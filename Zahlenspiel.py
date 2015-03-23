@@ -35,10 +35,7 @@ def generator(eingabe,stufe):
         
         z = random.randint(1,zmax)
         #pruefen des Schwierigkeitsgrades
-        if z <= zmax :
-               n = random.randint(1,99)
-        else:
-               n = random.randint(1,nmax)
+        n = random.randint(1,nmax)
         if z==n :
              continue
         b1 = fractions.Fraction(z, n)
@@ -49,7 +46,7 @@ def generator(eingabe,stufe):
                   continue
         else:
              continue
-        if n == b1.denominator: #vor her: <  jetzt: >
+        if n == b1.denominator:
              continue
         #Ausgabe der Brueche
         print ("Nr.",x," ",z,"/",n," Loesung: ", b1)
